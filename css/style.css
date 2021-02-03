@@ -1,6 +1,5 @@
 body {
-    padding-left: 400px;
-    padding-right: 400px;
+    padding: 50px 400px;
     font-family: 'Lato', sans-serif;
     line-height: 1.5em;
 }
@@ -30,12 +29,15 @@ blockquote {
     margin: 30px auto 30px auto;
     text-align: center;
     padding: 10px;
-    background-color: #2e8b57;
     max-width: 600px; 
-    color: #fff;
+    color: #2e8b57;
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 24px;
+    line-height: normal;
 }
 
 a {
-    text-decoration: none;
-    color:rgb(38, 206, 206);
+    text-decoration-thickness: 2px;
+    text-decoration-color: #2e8b57;
+    text-align: center;
 }
