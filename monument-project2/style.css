@@ -12,6 +12,7 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
 	color: #44545E;
+	width: 100%;
 }
 
 a {
@@ -70,15 +71,13 @@ Layout
 ------------------------------------------- */
 .container {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex: 1;
 	margin-bottom: 50px;
 }
 
-.guide {
-	margin-top: 30px;
-}
 
 h2	{
 	margin-bottom: 40px;
@@ -94,15 +93,6 @@ p {
 
 a {
 	margin: 0 15px 0 15px;
-}
-
-.about {
-	margin-top: 20px;
-}
-
-.about img {
-	margin-top: 30px;
-	width: 40%;
 }
 
 /* ----------------------------------------
