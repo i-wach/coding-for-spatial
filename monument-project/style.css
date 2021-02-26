@@ -12,6 +12,7 @@ Typography
 body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
+	padding: 50px;
 }
 
 a {
@@ -23,6 +24,8 @@ a {
 h1 {
 	color: #fff;
 	letter-spacing: .2em;
+	margin-top: 80px;
+	text-align: center;
 }
 
 h1, h3 {
@@ -54,7 +57,8 @@ header {
 
 .navHeader {
 	display: flex;
-	
+	height: 30px;
+	background-color: white;
 	
 }
 
