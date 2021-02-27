@@ -10,9 +10,7 @@ Typography
 ------------------------------------------- */
 body {
 	font-family: 'Nunito Sans', sans-serif;
-	font-size: 14px;
 	color: #44545E;
-	width: 100%;
 }
 
 a {
@@ -54,6 +52,10 @@ p {
 	font-size: 1.68em;
 }
 
+.column2 p {
+	font-size: 1.3em;
+}
+
 /* ----------------------------------------
 Lists
 ------------------------------------------- */
@@ -71,13 +73,22 @@ Layout
 ------------------------------------------- */
 .container {
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
 	align-items: flex-start;
-	flex: 1;
+	flex:1;
 	margin-bottom: 50px;
 }
 
+.column1 {
+	max-width: 1000px;
+	width: auto;
+}
+
+.column2 {
+	max-width: 425px;
+	width: auto;
+}
 
 h2	{
 	margin-bottom: 40px;
@@ -85,10 +96,6 @@ h2	{
 
 h3 {
 	margin-top: 50px;
-}
-
-p {
-	max-width: 1400px;
 }
 
 a {
@@ -102,17 +109,21 @@ header {
 	width: 100%;
 	height: 450px;
 	background-image: url("images/blog_header_bg.jpg");
+	background-size: cover;
 }
 
 .headerNav {
 	padding-left: 150px;
 	padding-right: 150px;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	height: 70px;
 	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 .headerNav a {
