@@ -6,13 +6,43 @@ h1, h2 {
     font-family: 'Archivo Black', sans-serif;
 }
 
+header {
+    padding-top: 40px;
+}
+
+span {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+header img {
+    display: block;
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;   
+}
+
+.intro h1 {
+    text-align: center;
+}
+
+.intro {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.imgContainer {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;  
+}
+
 .row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .col {
     flex: 1;
-    max-width: 32%;
+    max-width: 25%;
 
 }
