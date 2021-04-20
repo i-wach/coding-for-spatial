@@ -79,3 +79,13 @@ header img {
     max-width: 100%;
 
 }
+
+/* Image Viewer */
+
+.imageViewer {
+    display: block;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}

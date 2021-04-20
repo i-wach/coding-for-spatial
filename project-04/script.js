@@ -1119,3 +1119,22 @@ const sneakers = [
     // },
 ]
 
+// Pull DOM elements
+
+let imageViewer = document.getElementById("imageViewer");
+let brandDisplay = document.getElementById("brandDisplay");
+let nameDisplay = document.getElementById("nameDisplay");
+let priceDisplay = document.getElementById("priceDisplay");
+
+// call a random image for viewer
+
+let randomStart = Math.floor(Math.random() * sneakers.length);
+
+console.log(randomStart);
+
+// add random first image to image viewer
+
+imageViewer.src = sneakers[randomStart].image;
+// document.getElementById("brandDisplay").innerText = sneakers[randomStart].brand;
+
+console.log(sneakers[randomStart].brand);
