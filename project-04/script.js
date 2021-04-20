@@ -91,7 +91,7 @@ const sneakers = [
         color: "Black",
         occasion: 'Casual',
         silohuette: 'Skate',
-        image: 'images/0008.png',
+        image: 'images/0008.jpg',
         link: 'https://www.vans.com/shop/old-skool-black-white?utm_id=go_cmp-191532173_adg-26624222573_ad-95842386413_pla-866008078493_dev-c_ext-_prd-700053803770_mca-8181713_sig-CjwKCAjwjbCDBhAwEiwAiudByzJZruajq9SjI2OWs6qa5fyyVYE1I9wg2zufqghhya013cPJtkSZyhoC1SUQAvD_BwE&utm_source=google&gclid=CjwKCAjwjbCDBhAwEiwAiudByzJZruajq9SjI2OWs6qa5fyyVYE1I9wg2zufqghhya013cPJtkSZyhoC1SUQAvD_BwE', 
     },
     {
@@ -245,7 +245,7 @@ const sneakers = [
         color: "White",
         occasion: 'Casual',
         silohuette: 'Deck',
-        image: 'images/0022.png',
+        image: 'images/0022.jpg',
         link: 'https://www.vans.com/shop/mlx-era-true-white-true-white?utm_id=go_cmp-191532173_adg-26624199053_ad-95842234493_pla-865808573006_dev-c_ext-_prd-EWZBLK_VN%3A000EWZ%3ABLK%3A080%3AM%3A1%3A_mca-8181713_sig-CjwKCAjwjuqDBhAGEiwAdX2cj4sQgfUx1HNrZqViDHY0wnxzcyhbE9k7jFHK4voQ-Uh4mshW5CLsARoC06cQAvD_BwE&utm_source=google&radscid=191532173&gclid=CjwKCAjwjuqDBhAGEiwAdX2cj4sQgfUx1HNrZqViDHY0wnxzcyhbE9k7jFHK4voQ-Uh4mshW5CLsARoC06cQAvD_BwE', 
     },
     {
@@ -289,7 +289,7 @@ const sneakers = [
         color: "Black",
         occasion: 'Active',
         silohuette: 'Runner',
-        image: 'images/0026.png',
+        image: 'images/0026.jpg',
         link: 'https://www.asics.com/us/en-us/gel-kayano-27-ltx/p/ANA_1201A115-001.html?width=Standard', 
     },
     {
@@ -344,7 +344,7 @@ const sneakers = [
         color: "Black and White",
         occasion: 'Casual',
         silohuette: 'slip_On',
-        image: 'images/0031.png',
+        image: 'images/0031.jpg',
         link: 'https://www.vans.com/shop/shoes-classics-classic-slip-on/checkerboard-slip-on-black-off-white-check', 
     },
     {
@@ -366,7 +366,7 @@ const sneakers = [
         color: "White",
         occasion: 'Active',
         silohuette: 'Runner',
-        image: 'images/0033.png',
+        image: 'images/0033.jpg',
         link: 'https://www.nike.com/t/air-vapormax-flyknit-3-womens-shoe-ZHCbvC/AJ6910-100', 
     },
     {
@@ -641,7 +641,7 @@ const sneakers = [
         color: "White",
         occasion: 'Casual',
         silohuette: 'Runner',
-        image: 'images/0058.png',
+        image: 'images/0058.jpg',
         link: 'https://www.nike.com/t/air-max-97-womens-shoe-XD9m01/921733-100', 
     },
     {
@@ -718,7 +718,7 @@ const sneakers = [
         color: "Black",
         occasion: 'Casual',
         silohuette: 'Sock',
-        image: 'images/0065.png',
+        image: 'images/0065.jpg',
         link: 'https://shop.ilysm.com/collections/tabi-sneakers/products/silk-tabi-shadow-stripe', 
     },
     {
@@ -817,7 +817,7 @@ const sneakers = [
         color: "Navy",
         occasion: 'Casual',
         silohuette: 'Runner',
-        image: 'images/0074.png',
+        image: 'images/0074.jpg',
         link: 'nike.com/t/waffle-trainer-2-sp-mens-shoe-MkbSQ4/DB3004-400?nikemt=true&cp=81742485461_search_%7CPRODUCT_GROUP%7CGOOGLE%7C71700000052538341%7CAll_X_X_X_X-Device_X_Nike-FullPrice_X%7C%7Cc&gclsrc=aw.ds&&gclid=Cj0KCQjw1PSDBhDbARIsAPeTqrcKRXGdcjkEoXoHOwNFb1gqDkQrdHruQcC9kxZDNFwRVFw_J6hNSVYaAluQEALw_wcB&gclsrc=aw.ds', 
     },
     {
@@ -839,7 +839,7 @@ const sneakers = [
         color: "Grey",
         occasion: 'Casual',
         silohuette: 'Skate',
-        image: 'images/0076.png',
+        image: 'images/0076.jpg',
         link: 'https://www.vans.com/shop/shoes-classics-womens-sk8-hi/sk8-hi-tapered-drizzle-true-white', 
     },
     {
@@ -949,7 +949,7 @@ const sneakers = [
         color: "Grey",
         occasion: 'Casual',
         silohuette: 'Runner',
-        image: 'images/0086.png',
+        image: 'images/0086.jpg',
         link: 'https://www.nike.com/t/daybreak-womens-shoe-kM5pxT/CK2351-008?nikemt=true&cp=96413943330_search_%7cPRODUCT_GROUP%7cGOOGLE%7c71700000041489782%7cAll_X_X_X_X-Device_X_Nike-Clearance_X%7c%7cc&gclid=Cj0KCQjw1PSDBhDbARIsAPeTqrcFm_-MBaqomc_9XQIL39JQhxuVZlqTlcohBXCvx-cYTCpVA2dxI0YaArVjEALw_wcB&gclsrc=aw.ds', 
     },
     {
@@ -1026,7 +1026,7 @@ const sneakers = [
         color: "White",
         occasion: 'Active',
         silohuette: 'Runner',
-        image: 'images/0093.png',
+        image: 'images/0093.jpg',
         link: 'https://www.nike.com/t/air-huarache-mens-shoe-eoToq9X2/318429-111', 
     },
     {
