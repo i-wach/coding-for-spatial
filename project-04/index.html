@@ -14,27 +14,31 @@
         <img src="images/Logo.png" alt="Sneaker Logo">
     </header>
 
-    <div id="intro" class="intro">
-        <h1 class="startButton">START HERE</h1>
+    <!-- Header and Intro Popup -->
 
-        <div class="wrapperEl">
-            <div class="modalEl">
+    <div id="intro" class="intro">
+        <a class="startButton" href="#popup1"><h1>START HERE</h1></a>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
                 <h2>To Navigate the Collection</h2>
 
                 <p>You will start on a random item, and you will be presented with four options:</p>
 
                 <div class="optionsContainer">
-                    <h2 class="cost">COST</h2>
-                    <h2 class="occasion">OCCASION</h2>
-                    <h2 class="material">MATERIAL</h2>
-                    <h2 class="style">STYLE</h2>
+                    <span class="cost">COST</span>
+                    <span class="occasion">OCCASION</span>
+                    <span class="material">MATERIAL</span>
+                    <span class="style">STYLE</span>
                 </div>
 
                 <p>Depending on your choice, the next item shown will be similar based on the category you selected.</p>
 
-                <a href="#viewer"><span class="closeBtn">START</span></a>
+                <a href="#viewer" class="close">START</a>
             </div>
         </div>
+
+        <!-- First Flexbox Image Matrix -->
 
         <div class="imgContainer">
             <div class="row">
@@ -368,6 +372,8 @@
         </div>
     </div>
 
+    <!-- Image Viewer and Option buttons -->
+
     <div id="viewer" class="viewer">
             <img class="imgView" src="" alt="">
             <p class="brandDisplay"></p>
@@ -381,6 +387,8 @@
                 <button class="style">STYLE</button>
             </div>
     </div>
+
+    <!-- Second Flexbox Image Matrix -->
 
     <div id="responses" class="responses">
         <div class="imgContainer">
