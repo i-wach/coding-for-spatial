@@ -82,10 +82,13 @@ header img {
 
 /* Image Viewer */
 
+.viewer {
+    text-align: center;
+}
+
 .imageViewer {
     display: block;
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-
 }

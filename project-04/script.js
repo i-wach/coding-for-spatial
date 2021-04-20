@@ -850,7 +850,7 @@ const sneakers = [
         color: "Beige",
         occasion: 'Going Out',
         silohuette: 'Skate',
-        image: 'images/0077',
+        image: 'images/0077.jpg',
         link: 'https://www.net-a-porter.com/en-us/shop/product/christian-louboutin/vieira-spiked-suede-sneakers/1303519', 
     },
     {
@@ -1135,6 +1135,6 @@ console.log(randomStart);
 // add random first image to image viewer
 
 imageViewer.src = sneakers[randomStart].image;
-// document.getElementById("brandDisplay").innerText = sneakers[randomStart].brand;
-
-console.log(sneakers[randomStart].brand);
+brandDisplay.textContent += sneakers[randomStart].brand;
+nameDisplay.textContent += sneakers[randomStart].name;
+priceDisplay.textContent += sneakers[randomStart].price;
