@@ -38,11 +38,11 @@ header img {
 
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .col {
     flex: 1;
-    max-width: 25%;
+    max-width: 100%;
 
 }
