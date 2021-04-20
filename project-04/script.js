@@ -36,7 +36,7 @@ const sneakers = [
         color: "Beige",
         occasion: 'Casual',
         silohuette: 'Skate',
-        image: '0003.jpg',
+        image: 'images/0003.jpg',
         link: 'https://www.off---white.com/en-us/shopping/off-white-womens-out-of-office-ooo-sneakers-16254218', 
     },
     {
@@ -1138,3 +1138,55 @@ imageViewer.src = sneakers[randomStart].image;
 brandDisplay.textContent += sneakers[randomStart].brand;
 nameDisplay.textContent += sneakers[randomStart].name;
 priceDisplay.textContent += sneakers[randomStart].price;
+
+// remove first image from array
+
+console.log(sneakers.length)
+
+let sneakersPicked = sneakers.splice(randomStart, 1);
+
+// pull buttons from DOM
+
+const priceButton = document.querySelector('#price');
+const occasionButton = document.querySelector('#occasion');
+const materialButton = document.querySelector('#material');
+const styleButton = document.querySelector('#style');
+
+// add event listeners
+
+priceButton.addEventListener('click', price);
+
+// functions for selecting comparable images
+
+console.log(sneakersPicked.length)
+
+console.log(sneakers.length)
+
+function price(){
+    let cost = sneakersPicked[sneakersPicked.length - 1].price
+    console.log(cost)
+
+    let random = Math.floor(Math.random() * sneakers.length);
+
+    if (random.price < cost + 50 & random.price > cost - 50) {
+        sneakersPicked += sneakers.splice(random, 1);
+    } else {
+        let x = true;
+        while (x = true) {
+            random = Math.floor(Math.random() * sneakers.length);
+            if (random.price < cost + 50 & random.price > cost - 50) {
+                x = false;
+            } else {
+                x = true;
+            }
+        }
+        sneakersPicked += sneakers.splice(random, 1);
+    }
+
+    imageViewer.src = sneakers[random].image;
+    brandDisplay.textContent += sneakers[random].brand;
+    nameDisplay.textContent += sneakers[random].name;
+    priceDisplay.textContent += sneakers[random].price;
+
+    priceButton.disabled = true
+}
