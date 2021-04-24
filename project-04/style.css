@@ -39,7 +39,7 @@ header img {
     margin-left: 17%;
     margin-right: 17%;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 /* Modal */
@@ -87,13 +87,12 @@ header img {
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .col {
     flex: 1;
     max-width: 100%;
-
 }
 
 /* Image Viewer */
@@ -168,4 +167,6 @@ a:hover {
     visibility: hidden;
 }
 
-
+#responses {
+    opacity: 1;
+}

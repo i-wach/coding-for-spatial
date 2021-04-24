@@ -1292,11 +1292,20 @@ function priceMatch(){
     let hiCost = cost + 50;
     let loCost = cost - 50;
 
-    if (sneakers[random].price <= hiCost && sneakers[random].price >= loCost) {
+    console.log(cost)
+    console.log(hiCost)
+    console.log(loCost)
+
+    bool = sneakers[random].price <= hiCost && sneakers[random].price >= loCost
+
+    console.log(bool)
+
+    if (bool === true) {
         sneakersPicked.push(sneakers[random]);
     } else {
-        while (sneakers[random].price <= hiCost && sneakers[random].price >= loCost) {
-        random = Math.floor(Math.random() * sneakers.length);  
+        while (bool === false) {
+        random = Math.floor(Math.random() * sneakers.length);
+        bool = sneakers[random].price <= hiCost && sneakers[random].price >= loCost  
         }
         sneakersPicked.push(sneakers[random]);
     }
@@ -1466,9 +1475,38 @@ function showButton() {
 
 seeResultsButton.addEventListener('click', revealResults);
 
+
+
 function revealResults() {
 
-    let image1 = document.getElementById(sneakersPicked[0].id);
-    console.log(image1); 
+    
+    let allOfClass = document.querySelectorAll(".col");
+    
+    for (i = 0; i < allOfClass.length; i++) {
+        allOfClass[i].style.visibility = "hidden";
+    }
+    
+    let image1 = document.getElementById(sneakersPicked[0].id); 
+    let image2 = document.getElementById(sneakersPicked[1].id); 
+    let image3 = document.getElementById(sneakersPicked[2].id); 
+    let image4 = document.getElementById(sneakersPicked[3].id); 
+    let image5 = document.getElementById(sneakersPicked[4].id); 
+    
+
+    image1.style.border = "15px solid #00d200";
+    image1.style.visibility = "visible";
+
+    image2.style.border = "15px solid #748C76";
+    image2.style.visibility = "visible";
+
+    image3.style.border = "15px solid #30343F";
+    image3.style.visibility = "visible";
+
+    image4.style.border = "15px solid #939597";
+    image4.style.visibility = "visible";
+
+    image5.style.border = "15px solid #EEE0DC";
+    image5.style.visibility = "visible";
+
 }
 
