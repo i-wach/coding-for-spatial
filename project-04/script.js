@@ -1135,15 +1135,21 @@ console.log(randomStart);
 // add random first image to image viewer
 
 imageViewer.src = sneakers[randomStart].image;
-brandDisplay.textContent += sneakers[randomStart].brand;
-nameDisplay.textContent += sneakers[randomStart].name;
-priceDisplay.textContent += sneakers[randomStart].price;
+brandDisplay.textContent = sneakers[randomStart].brand;
+nameDisplay.textContent = sneakers[randomStart].name;
+priceDisplay.textContent = "$" + sneakers[randomStart].price;
 
 // remove first image from array
 
+// const sneakersPicked = []
+
 console.log(sneakers.length)
 
-let sneakersPicked = sneakers.splice(randomStart, 1);
+const sneakersPicked = [];
+
+sneakersPicked.push(sneakers[randomStart]);
+
+console.log(sneakersPicked)
 
 // pull buttons from DOM
 
@@ -1154,39 +1160,116 @@ const styleButton = document.querySelector('#style');
 
 // add event listeners
 
-priceButton.addEventListener('click', price);
+priceButton.addEventListener('click', priceMatch);
+occasionButton.addEventListener('click', occasionMatch);
+materialButton.addEventListener('click', materialMatch);
+// styleButton.addEventListener('click', styleMatch);
 
 // functions for selecting comparable images
 
 console.log(sneakersPicked.length)
 
+console.log(sneakersPicked)
+
 console.log(sneakers.length)
 
-function price(){
+console.log(sneakers)
+
+function priceMatch(){
     let cost = sneakersPicked[sneakersPicked.length - 1].price
     console.log(cost)
 
     let random = Math.floor(Math.random() * sneakers.length);
 
-    if (random.price < cost + 50 & random.price > cost - 50) {
+    console.log(sneakers[random].price)
+
+    // if (sneakers[random].price < cost + 50 && sneakers[random].price > cost - 50) {
+    //     let x = false
+    // } else {
+    //     x = true
+    // }
+
+    if (sneakers[random].price < cost + 50 && sneakers[random].price > cost - 50) {
+        sneakers.splice(random, 1);
+    } else {
+        while (sneakers[random].price > cost + 50 && sneakers[random].price < cost - 50) {
+        random = Math.floor(Math.random() * sneakers.length);  
+        }
+        
+        sneakersPicked.push(sneakers[random]);
+    }
+
+    imageViewer.src = sneakers[random].image;
+    brandDisplay.textContent = sneakers[random].brand;
+    nameDisplay.textContent = sneakers[random].name;
+    priceDisplay.textContent = "$" + sneakers[random].price;
+
+    priceButton.disabled = true
+    priceButton.style.color = 'black'
+
+    console.log(sneakersPicked)
+    console.log(sneakersPicked.length)
+    console.log(sneakers.length)
+
+    return sneakers, sneakersPicked
+}
+
+function occasionMatch() {
+    console.log(sneakersPicked.length)
+
+    let occasion = sneakersPicked[sneakersPicked.length - 1].occasion
+
+    let random = Math.floor(Math.random() * sneakers.length);
+
+    if (occasion = sneakers[random].occasion) {
         sneakersPicked += sneakers.splice(random, 1);
     } else {
-        let x = true;
-        while (x = true) {
+        while (occasion != sneakers[random].occasion) {
             random = Math.floor(Math.random() * sneakers.length);
-            if (random.price < cost + 50 & random.price > cost - 50) {
-                x = false;
-            } else {
-                x = true;
-            }
         }
         sneakersPicked += sneakers.splice(random, 1);
     }
 
     imageViewer.src = sneakers[random].image;
-    brandDisplay.textContent += sneakers[random].brand;
-    nameDisplay.textContent += sneakers[random].name;
-    priceDisplay.textContent += sneakers[random].price;
+    brandDisplay.textContent = sneakers[random].brand;
+    nameDisplay.textContent = sneakers[random].name;
+    priceDisplay.textContent = "$" + sneakers[random].price;
 
-    priceButton.disabled = true
+    occasionButton.disabled = true
+    occasionButton.style.color = 'black'
+
+    console.log(sneakersPicked[1])
+    console.log(sneakers.length)
+
+    return sneakers, sneakersPicked
+}
+
+function materialMatch() {
+    console.log(sneakersPicked.length)
+
+    let material = sneakersPicked[sneakersPicked.length - 1].material
+
+    let random = Math.floor(Math.random() * sneakers.length);
+
+    if (material = sneakers[random].material) {
+        sneakersPicked += sneakers.splice(random, 1);
+    } else {
+        while (material != sneakers[random].material) {
+            random = Math.floor(Math.random() * sneakers.length);
+        }
+        sneakersPicked += sneakers.splice(random, 1);
+    }
+
+    imageViewer.src = sneakers[random].image;
+    brandDisplay.textContent = sneakers[random].brand;
+    nameDisplay.textContent = sneakers[random].name;
+    priceDisplay.textContent = "$" + sneakers[random].price;
+
+    materialButton.disabled = true
+    materialButton.style.color = 'black'
+
+    console.log(sneakersPicked[1])
+    console.log(sneakers.length)
+
+    return sneakers, sneakersPicked
 }
