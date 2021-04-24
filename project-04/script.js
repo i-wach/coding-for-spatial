@@ -234,7 +234,7 @@ const sneakers = [
         color: "Brown",
         occasion: 'Going Out',
         silohuette: 'Basketball',
-        image: 'image/0021.jpg',
+        image: 'images/0021.jpg',
         link: 'https://kith.com/collections/mens-footwear/products/hsmip-22-natural', 
     },
     {
@@ -1191,11 +1191,13 @@ function priceMatch(){
     // } else {
     //     x = true
     // }
+    let hiCost = cost + 50;
+    let loCost = cost - 50;
 
-    if (sneakers[random].price < cost + 50 && sneakers[random].price > cost - 50) {
+    if (sneakers[random].price <= hiCost && sneakers[random].price >= loCost) {
         sneakersPicked.push(sneakers[random]);
     } else {
-        while (sneakers[random].price > cost + 50 && sneakers[random].price < cost - 50) {
+        while (sneakers[random].price <= hiCost && sneakers[random].price >= loCost) {
         random = Math.floor(Math.random() * sneakers.length);  
         }
         sneakersPicked.push(sneakers[random]);
@@ -1211,11 +1213,13 @@ function priceMatch(){
 
      // disable button
     priceButton.disabled = true
-    priceButton.style.color = 'darkred'
+    priceButton.style.color = 'white'
 
     console.log(sneakersPicked)
     console.log(sneakersPicked.length)
     console.log(sneakers.length)
+
+    showButton()
 
     return sneakers, sneakersPicked
 }
@@ -1256,10 +1260,12 @@ function occasionMatch() {
 
     // disable button
     occasionButton.disabled = true
-    occasionButton.style.color = 'darkred'
+    occasionButton.style.color = 'white'
 
     console.log(sneakersPicked.length)
     console.log(sneakers.length)
+
+    showButton()
 
     return sneakers, sneakersPicked
 }
@@ -1294,10 +1300,12 @@ function materialMatch() {
     sneakers.splice(random, 1);
 
     materialButton.disabled = true
-    materialButton.style.color = 'darkred'
+    materialButton.style.color = 'white'
 
     console.log(sneakersPicked.length)
     console.log(sneakers.length)
+
+    showButton()
 
     return sneakers, sneakersPicked
 }
@@ -1334,12 +1342,35 @@ function styleMatch() {
     sneakers.splice(random, 1);
 
     styleButton.disabled = true
-    styleButton.style.color = 'darkred'
+    styleButton.style.color = 'white'
 
-    console.log(sneakersPicked.length)
+    console.log(sneakersPicked)
     console.log(sneakers.length)
+
+    showButton()
 
     return sneakers, sneakersPicked
 }
 
 // reveal results button
+
+const seeResultsButton = document.querySelector('#seeResults');
+
+function showButton() {
+    if (priceButton.disabled && occasionButton.disabled && materialButton.disabled && styleButton.disabled) {
+        seeResultsButton.style.visibility = 'visible';
+    } else {
+        seeResultsButton.style.visibility = 'hidden'; 
+    }
+}
+
+// see results function
+
+seeResultsButton.addEventListener('click', revealResults);
+
+function revealResults() {
+
+    let image1 = document.querySelector(sneakersPicked[0].image);
+    console.log(image1); 
+}
+
