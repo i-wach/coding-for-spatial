@@ -1149,7 +1149,10 @@ const sneakersPicked = [];
 
 sneakersPicked.push(sneakers[randomStart]);
 
+sneakers.splice(randomStart, 1)
+
 console.log(sneakersPicked)
+console.log(sneakers.length)
 
 // pull buttons from DOM
 
@@ -1163,7 +1166,7 @@ const styleButton = document.querySelector('#style');
 priceButton.addEventListener('click', priceMatch);
 occasionButton.addEventListener('click', occasionMatch);
 materialButton.addEventListener('click', materialMatch);
-// styleButton.addEventListener('click', styleMatch);
+styleButton.addEventListener('click', styleMatch);
 
 // functions for selecting comparable images
 
@@ -1190,12 +1193,11 @@ function priceMatch(){
     // }
 
     if (sneakers[random].price < cost + 50 && sneakers[random].price > cost - 50) {
-        sneakers.splice(random, 1);
+        sneakersPicked.push(sneakers[random]);
     } else {
         while (sneakers[random].price > cost + 50 && sneakers[random].price < cost - 50) {
         random = Math.floor(Math.random() * sneakers.length);  
         }
-        
         sneakersPicked.push(sneakers[random]);
     }
 
@@ -1204,8 +1206,12 @@ function priceMatch(){
     nameDisplay.textContent = sneakers[random].name;
     priceDisplay.textContent = "$" + sneakers[random].price;
 
+    // remove selected object from the sneaker array
+    sneakers.splice(random, 1);
+
+     // disable button
     priceButton.disabled = true
-    priceButton.style.color = 'black'
+    priceButton.style.color = 'darkred'
 
     console.log(sneakersPicked)
     console.log(sneakersPicked.length)
@@ -1214,50 +1220,68 @@ function priceMatch(){
     return sneakers, sneakersPicked
 }
 
+// occasion selector function
 function occasionMatch() {
     console.log(sneakersPicked.length)
 
-    let occasion = sneakersPicked[sneakersPicked.length - 1].occasion
+    let occasionPicked = sneakersPicked[sneakersPicked.length - 1].occasion
+    console.log(occasionPicked)
 
     let random = Math.floor(Math.random() * sneakers.length);
 
-    if (occasion = sneakers[random].occasion) {
-        sneakersPicked += sneakers.splice(random, 1);
+    // if else to test if randomly selected object is similar to the object currently displayed
+    if (occasionPicked === sneakers[random].occasion) {
+        sneakersPicked.push(sneakers[random]);
+
     } else {
-        while (occasion != sneakers[random].occasion) {
+        // run while loop until the object properties match
+        while (occasionPicked !== sneakers[random].occasion) {
             random = Math.floor(Math.random() * sneakers.length);
+            console.log(sneakers[random.occasion])
         }
-        sneakersPicked += sneakers.splice(random, 1);
+        sneakersPicked.push(sneakers[random]);
     }
 
+    // replace info in the viewer
     imageViewer.src = sneakers[random].image;
     brandDisplay.textContent = sneakers[random].brand;
     nameDisplay.textContent = sneakers[random].name;
     priceDisplay.textContent = "$" + sneakers[random].price;
 
-    occasionButton.disabled = true
-    occasionButton.style.color = 'black'
+    console.log(sneakers[random].occasion)
+    console.log(sneakers[random].material)
 
-    console.log(sneakersPicked[1])
+    // remove selected object from the sneaker array
+    sneakers.splice(random, 1);
+
+    // disable button
+    occasionButton.disabled = true
+    occasionButton.style.color = 'darkred'
+
+    console.log(sneakersPicked.length)
     console.log(sneakers.length)
 
     return sneakers, sneakersPicked
 }
 
+// material selector function
 function materialMatch() {
     console.log(sneakersPicked.length)
 
-    let material = sneakersPicked[sneakersPicked.length - 1].material
+    let materialPicked = sneakersPicked[sneakersPicked.length - 1].material
+
+    console.log(materialPicked)
 
     let random = Math.floor(Math.random() * sneakers.length);
 
-    if (material = sneakers[random].material) {
-        sneakersPicked += sneakers.splice(random, 1);
+    if (materialPicked === sneakers[random].material) {
+        sneakersPicked.push(sneakers[random]);
+
     } else {
-        while (material != sneakers[random].material) {
+        while (materialPicked !== sneakers[random].material) {
             random = Math.floor(Math.random() * sneakers.length);
         }
-        sneakersPicked += sneakers.splice(random, 1);
+        sneakersPicked.push(sneakers[random]);
     }
 
     imageViewer.src = sneakers[random].image;
@@ -1265,11 +1289,57 @@ function materialMatch() {
     nameDisplay.textContent = sneakers[random].name;
     priceDisplay.textContent = "$" + sneakers[random].price;
 
-    materialButton.disabled = true
-    materialButton.style.color = 'black'
+    console.log(sneakers[random].material)
 
-    console.log(sneakersPicked[1])
+    sneakers.splice(random, 1);
+
+    materialButton.disabled = true
+    materialButton.style.color = 'darkred'
+
+    console.log(sneakersPicked.length)
     console.log(sneakers.length)
 
     return sneakers, sneakersPicked
 }
+
+// stlye selector function
+function styleMatch() {
+    console.log(sneakersPicked.length)
+
+    let stylePicked = sneakersPicked[sneakersPicked.length - 1].silohuette
+
+        console.log(stylePicked)
+
+    let random = Math.floor(Math.random() * sneakers.length);
+
+        console.log(sneakers[random].silohuette)
+
+    if (stylePicked === sneakers[random].silohuette) {
+        sneakersPicked.push(sneakers[random]);
+        
+    } else {
+        while (stylePicked !== sneakers[random].silohuette) {
+            random = Math.floor(Math.random() * sneakers.length);
+        }
+        sneakersPicked.push(sneakers[random]);
+    }
+
+    imageViewer.src = sneakers[random].image;
+    brandDisplay.textContent = sneakers[random].brand;
+    nameDisplay.textContent = sneakers[random].name;
+    priceDisplay.textContent = "$" + sneakers[random].price;
+
+    console.log(sneakers[random].silohuette)
+
+    sneakers.splice(random, 1);
+
+    styleButton.disabled = true
+    styleButton.style.color = 'darkred'
+
+    console.log(sneakersPicked.length)
+    console.log(sneakers.length)
+
+    return sneakers, sneakersPicked
+}
+
+// reveal results button

@@ -135,3 +135,7 @@ button {
 .style {
     color: #EEE0DC;
 }
+
+.seeResults {
+    visibility: hidden;
+}
