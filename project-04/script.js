@@ -1195,7 +1195,7 @@ const sneakers = [
     {
         brand: "Merrell",
         name: "Long Sky",
-        price: "130",
+        price: 130,
         material: "Textile",
         color: "White",
         occasion: 'Active',
@@ -1468,7 +1468,7 @@ seeResultsButton.addEventListener('click', revealResults);
 
 function revealResults() {
 
-    let image1 = document.get
+    let image1 = document.getElementById(sneakersPicked[0].id);
     console.log(image1); 
 }
 

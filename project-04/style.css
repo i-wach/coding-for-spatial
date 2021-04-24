@@ -25,11 +25,20 @@ header img {
 
 .intro h1 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .intro {
     margin-top: 20px;
     margin-bottom: 80px;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.responses {
+    margin-left: 17%;
+    margin-right: 17%;
+    padding-bottom: 50px;
 }
 
 /* Modal */
@@ -88,7 +97,7 @@ header img {
     font-size: 1.68em;
     font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .imageViewer {
