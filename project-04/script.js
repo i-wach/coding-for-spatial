@@ -1315,6 +1315,8 @@ function priceMatch(){
     nameDisplay.textContent = sneakers[random].name;
     priceDisplay.textContent = "$" + sneakers[random].price;
 
+    sneakers[random].selection = price
+
     // remove selected object from the sneaker array
     sneakers.splice(random, 1);
 
@@ -1362,6 +1364,8 @@ function occasionMatch() {
     console.log(sneakers[random].occasion)
     console.log(sneakers[random].material)
 
+    sneakers[random].selection = occasion
+
     // remove selected object from the sneaker array
     sneakers.splice(random, 1);
 
@@ -1403,6 +1407,8 @@ function materialMatch() {
     priceDisplay.textContent = "$" + sneakers[random].price;
 
     console.log(sneakers[random].material)
+
+    sneakers[random].selection = material
 
     sneakers.splice(random, 1);
 
@@ -1446,6 +1452,8 @@ function styleMatch() {
 
     console.log(sneakers[random].silohuette)
 
+    sneakers[random].selection = style
+
     sneakers.splice(random, 1);
 
     styleButton.disabled = true
@@ -1486,27 +1494,34 @@ function revealResults() {
         allOfClass[i].style.visibility = "hidden";
     }
     
-    let image1 = document.getElementById(sneakersPicked[0].id); 
-    let image2 = document.getElementById(sneakersPicked[1].id); 
-    let image3 = document.getElementById(sneakersPicked[2].id); 
-    let image4 = document.getElementById(sneakersPicked[3].id); 
-    let image5 = document.getElementById(sneakersPicked[4].id); 
+    let imageStart = document.getElementById(sneakersPicked[0].id); 
+
+    // for (selction in sneakersPicked) {
+    //     if (sneakersPicked[i].selection === price) {
+            
+    //     }
+    // }
+
+    let imagePrice = document.getElementById(sneakersPicked[1].id); 
+    let imageOccasion = document.getElementById(sneakersPicked[2].id); 
+    let imageMaterial = document.getElementById(sneakersPicked[3].id); 
+    let imageStyle = document.getElementById(sneakersPicked[4].id); 
     
 
-    image1.style.border = "10px solid #ffffff";
-    image1.style.visibility = "visible";
+    imageStart.style.border = "10px solid #ffffff";
+    imageStart.style.visibility = "visible";
 
-    image2.style.border = "10px solid #748C76";
-    image2.style.visibility = "visible";
+    imagePrice.style.border = "10px solid #748C76";
+    imagePrice.style.visibility = "visible";
 
-    image3.style.border = "10px solid #30343F";
-    image3.style.visibility = "visible";
+    imageOccasion.style.border = "10px solid #30343F";
+    imageOccasion.style.visibility = "visible";
 
-    image4.style.border = "10px solid #939597";
-    image4.style.visibility = "visible";
+    imageMaterial.style.border = "10px solid #939597";
+    imageMaterial.style.visibility = "visible";
 
-    image5.style.border = "10px solid #EEE0DC";
-    image5.style.visibility = "visible";
+    imageStyle.style.border = "10px solid #EEE0DC";
+    imageStyle.style.visibility = "visible";
 
 }
 
