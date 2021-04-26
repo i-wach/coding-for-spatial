@@ -1480,7 +1480,7 @@ seeResultsButton.addEventListener('click', revealResults);
 function revealResults() {
 
     
-    let allOfClass = document.querySelectorAll(".col");
+    let allOfClass = document.querySelectorAll(".col1");
     
     for (i = 0; i < allOfClass.length; i++) {
         allOfClass[i].style.visibility = "hidden";
@@ -1493,19 +1493,19 @@ function revealResults() {
     let image5 = document.getElementById(sneakersPicked[4].id); 
     
 
-    image1.style.border = "15px solid #00d200";
+    image1.style.border = "10px solid #ffffff";
     image1.style.visibility = "visible";
 
-    image2.style.border = "15px solid #748C76";
+    image2.style.border = "10px solid #748C76";
     image2.style.visibility = "visible";
 
-    image3.style.border = "15px solid #30343F";
+    image3.style.border = "10px solid #30343F";
     image3.style.visibility = "visible";
 
-    image4.style.border = "15px solid #939597";
+    image4.style.border = "10px solid #939597";
     image4.style.visibility = "visible";
 
-    image5.style.border = "15px solid #EEE0DC";
+    image5.style.border = "10px solid #EEE0DC";
     image5.style.visibility = "visible";
 
 }
