@@ -1237,7 +1237,9 @@ brandDisplay.textContent = sneakers[randomStart].brand;
 nameDisplay.textContent = sneakers[randomStart].name;
 priceDisplay.textContent = "$" + sneakers[randomStart].price;
 
-// remove first image from array
+// add selection property
+
+sneakers[randomStart].selection = 'first';
 
 // const sneakersPicked = []
 
@@ -1315,7 +1317,7 @@ function priceMatch(){
     nameDisplay.textContent = sneakers[random].name;
     priceDisplay.textContent = "$" + sneakers[random].price;
 
-    sneakers[random].selection = price
+    sneakers[random].selection = 'price'
 
     // remove selected object from the sneaker array
     sneakers.splice(random, 1);
@@ -1364,7 +1366,7 @@ function occasionMatch() {
     console.log(sneakers[random].occasion)
     console.log(sneakers[random].material)
 
-    sneakers[random].selection = occasion
+    sneakers[random].selection = 'occasion'
 
     // remove selected object from the sneaker array
     sneakers.splice(random, 1);
@@ -1408,7 +1410,7 @@ function materialMatch() {
 
     console.log(sneakers[random].material)
 
-    sneakers[random].selection = material
+    sneakers[random].selection = 'material'
 
     sneakers.splice(random, 1);
 
@@ -1452,7 +1454,7 @@ function styleMatch() {
 
     console.log(sneakers[random].silohuette)
 
-    sneakers[random].selection = style
+    sneakers[random].selection = 'style'
 
     sneakers.splice(random, 1);
 
@@ -1493,22 +1495,21 @@ function revealResults() {
     for (i = 0; i < allOfClass.length; i++) {
         allOfClass[i].style.visibility = "hidden";
     }
+
+    console.log(sneakersPicked)
+
+    sneakersPicked.sort((a,b) => (a.selection > b.selection) ? 1 : ((b.selection > a.selection) ? -1 : 0))
+        
+    console.log(sneakersPicked)
     
     let imageStart = document.getElementById(sneakersPicked[0].id); 
-
-    // for (selction in sneakersPicked) {
-    //     if (sneakersPicked[i].selection === price) {
-            
-    //     }
-    // }
-
-    let imagePrice = document.getElementById(sneakersPicked[1].id); 
-    let imageOccasion = document.getElementById(sneakersPicked[2].id); 
-    let imageMaterial = document.getElementById(sneakersPicked[3].id); 
+    let imageMaterial = document.getElementById(sneakersPicked[1].id);
+    let imageOccasion = document.getElementById(sneakersPicked[2].id);
+    let imagePrice = document.getElementById(sneakersPicked[3].id);
     let imageStyle = document.getElementById(sneakersPicked[4].id); 
     
 
-    imageStart.style.border = "10px solid #ffffff";
+    imageStart.style.border = "10px solid #00d200";
     imageStart.style.visibility = "visible";
 
     imagePrice.style.border = "10px solid #748C76";
