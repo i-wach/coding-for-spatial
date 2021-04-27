@@ -18,3 +18,12 @@ img {
     max-width: 30px;
 }
 
+a  {
+    font-size: 1.68em;
+    color: black;
+    line-height: 2em;
+}
+
+a:hover {
+    color: blue;
+}
